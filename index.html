@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>公众号文章美化工具</title>
+  <meta name="description" content="免费、纯前端的微信公众号文章排版与美化工具。支持实时预览、主题切换和复制到公众号。" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">排</div>
+      <div><strong>公众号文章美化工具</strong><span>本地处理 · 免费使用 · 无需登录</span></div>
+    </div>
+    <div class="top-actions"><span class="privacy"><i></i> 内容仅在本机处理</span></div>
+  </header>
+
+  <main class="app-shell">
+    <section class="intro">
+      <div class="eyebrow">WECHAT ARTICLE STYLER</div>
+      <h1>让每一篇文章，<em>都更好读。</em></h1>
+      <p>粘贴正文，选择喜欢的风格，预览后复制到微信公众号编辑器。</p>
+    </section>
+
+    <section class="workspace">
+      <aside class="editor-panel panel">
+        <div class="panel-heading">
+          <div><span class="step">01</span><h2>文章内容</h2></div>
+          <button class="text-button" id="loadSample">载入示例</button>
+        </div>
+        <label class="field-label" for="articleTitle">文章标题</label>
+        <input id="articleTitle" class="title-input" value="AI 正在改变世界：这几个趋势值得关注" maxlength="120" />
+        <div class="input-label-row">
+          <label class="field-label" for="articleBody">正文内容</label>
+          <span id="charCount">0 字</span>
+        </div>
+        <textarea id="articleBody" spellcheck="false" placeholder="在这里粘贴文章正文。&#10;&#10;支持简单 Markdown：&#10;# 一级标题&#10;## 二级标题&#10;**重点文字**&#10;> 引用或重点提示&#10;- 列表项目"></textarea>
+        <div class="hint"><span class="hint-icon">✦</span> 支持普通文本和简单 Markdown；空行会转换为段落。</div>
+        <div class="editor-actions">
+          <button class="btn btn-quiet" id="clearBtn">清空</button>
+          <button class="btn btn-primary" id="formatBtn">美化文章 <span>→</span></button>
+        </div>
+      </aside>
+
+      <section class="preview-panel panel">
+        <div class="panel-heading preview-heading">
+          <div><span class="step">02</span><h2>样式与预览</h2></div>
+          <span class="live-status"><i></i> 实时预览</span>
+        </div>
+        <div class="theme-picker">
+          <button class="theme-option active" data-theme="tech"><span class="swatch swatch-tech"></span><span><b>清爽文档</b><small>简洁 · 易读</small></span><span class="check">✓</span></button>
+          <button class="theme-option" data-theme="minimal"><span class="swatch swatch-minimal"></span><span><b>极简黑</b><small>克制 · 耐读</small></span><span class="check">✓</span></button>
+          <button class="theme-option" data-theme="warm"><span class="swatch swatch-warm"></span><span><b>暖橙资讯</b><small>醒目 · 有温度</small></span><span class="check">✓</span></button>
+        </div>
+        <div class="preview-toolbar"><span>手机阅读效果</span><span class="phone-icon">▯</span></div>
+        <div class="phone-stage">
+          <article id="preview" class="wechat-article theme-tech">
+            <div class="article-kicker">TECH INSIGHTS <span>·</span> 科技观察</div>
+            <h1>AI 正在改变世界：这几个趋势值得关注</h1>
+            <div class="article-meta">科技前沿 · 深度观察</div>
+            <div class="article-content"><p>在这里输入文章内容，右侧将实时呈现排版效果。</p></div>
+            <div class="article-footer">— END —</div>
+          </article>
+        </div>
+        <div class="export-actions">
+          <button class="btn btn-primary copy-rich" id="copyRichBtn">复制排版内容 <span>↗</span></button>
+          <button class="btn btn-outline" id="copyHtmlBtn">复制 HTML</button>
+          <button class="btn btn-outline" id="downloadBtn">导出 HTML</button>
+        </div>
+        <p class="copy-note">推荐点击「复制排版内容」，再粘贴到微信公众号图文编辑器。不同浏览器的富文本剪贴板支持可能略有差异。</p>
+      </section>
+    </section>
+
+    <section class="howto">
+      <div class="howto-title"><span class="step">03</span><h2>如何发布到公众号</h2></div>
+      <div class="steps">
+        <div class="howto-card"><span>1</span><b>粘贴文章</b><p>将标题和正文放入左侧编辑区。</p></div>
+        <div class="howto-card"><span>2</span><b>选择样式</b><p>切换主题，查看右侧手机预览。</p></div>
+        <div class="howto-card"><span>3</span><b>复制并发布</b><p>复制排版内容，粘贴到公众号后台并检查图片与间距。</p></div>
+      </div>
+    </section>
+    <footer>公众号文章美化工具 <span>·</span> 免费使用，文章内容不会上传到服务器。</footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
