@@ -5,18 +5,23 @@
 @media(max-width:980px){.workspace{grid-template-columns:1fr}.editor-panel,.preview-panel{padding:20px}textarea{height:300px}.phone-stage{max-height:none}.preview-panel{max-width:none}}@media(max-width:560px){.topbar{height:66px;padding:0 16px}.privacy{display:none}.app-shell{padding:25px 12px}.intro{margin-bottom:22px}.intro p{font-size:12px;line-height:1.7}.workspace{gap:13px}.panel{border-radius:14px}.editor-panel,.preview-panel{padding:15px}.theme-picker{gap:5px}.theme-option{padding:8px 5px;gap:5px}.swatch{width:17px;height:17px}.theme-option b{font-size:10px}.theme-option small{font-size:8px}.check{font-size:10px}.wechat-article{padding:23px 18px}.wechat-article h1{font-size:22px}.steps{grid-template-columns:1fr}.howto{padding:17px}.export-actions .btn{padding:11px 10px}.copy-rich{flex-basis:100%}}
 
 
-/* Reference-inspired clean document style: narrow reading column, quiet typography, pale-blue callouts. */
-.wechat-article.theme-tech{max-width:590px;padding:18px 0 25px;box-shadow:none;color:#24272c}
-.theme-tech .article-kicker{display:none}
-.theme-tech .article-meta{display:none}
-.theme-tech .article-content{font-size:15px;line-height:1.95;color:#0f1117}
-.theme-tech .article-content p{margin:0 0 17px}
-.theme-tech .article-content h2{font-size:21px;line-height:1.5;margin:26px 0 14px;padding:0 0 0 0;border:0;color:#25282d;font-weight:800}
-.theme-tech .article-content h3{font-size:16px;line-height:1.6;margin:22px 0 12px;color:#30343a;font-weight:750}
-.theme-tech .article-content strong{color:#16191f;font-weight:750}
-.theme-tech .article-content blockquote{margin:18px 0;padding:15px 16px;background:#f2f6ff;border-left:3px solid #3678ff;border-radius:6px;color:#20242b;font-size:15px;line-height:1.9}
+/* Reference-inspired clean document style: narrow reading column, quiet typography, pale callouts. Shared by tech / minimal / warm; only the accent colors differ. */
+.wechat-article.theme-tech,.wechat-article.theme-minimal,.wechat-article.theme-warm{max-width:590px;padding:18px 0 25px;box-shadow:none;color:#24272c}
+.theme-tech .article-kicker,.theme-minimal .article-kicker,.theme-warm .article-kicker{display:none}
+.theme-tech .article-meta,.theme-minimal .article-meta,.theme-warm .article-meta{display:none}
+.theme-tech .article-content,.theme-minimal .article-content,.theme-warm .article-content{font-size:15px;line-height:1.95;color:#0f1117}
+.theme-tech .article-content p,.theme-minimal .article-content p,.theme-warm .article-content p{margin:0 0 17px}
+.theme-tech .article-content h2,.theme-minimal .article-content h2,.theme-warm .article-content h2{font-size:21px;line-height:1.5;margin:26px 0 14px;padding:0;border:0;font-weight:800}
+.theme-tech .article-content h3,.theme-minimal .article-content h3,.theme-warm .article-content h3{font-size:16px;line-height:1.6;margin:22px 0 12px;font-weight:750}
+.theme-tech .article-content strong,.theme-minimal .article-content strong,.theme-warm .article-content strong{font-weight:750}
+.theme-tech .article-content blockquote,.theme-minimal .article-content blockquote,.theme-warm .article-content blockquote{margin:18px 0;padding:15px 16px;border-radius:6px;font-size:15px;line-height:1.9}
+.theme-tech .article-content ul,.theme-minimal .article-content ul,.theme-warm .article-content ul{padding-left:1.4em;margin:9px 0 18px}
+.theme-tech .article-content li,.theme-minimal .article-content li,.theme-warm .article-content li{margin:5px 0}
+.theme-tech .article-content code,.theme-minimal .article-content code,.theme-warm .article-content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;background:#f2f4f7;border-radius:4px;padding:2px 5px;color:#374151}
+.theme-tech .article-footer,.theme-minimal .article-footer,.theme-warm .article-footer{margin-top:28px}
+/* Tech accent colors (minimal / warm keep their own colors defined above). */
+.theme-tech .article-content h2{color:#25282d}
+.theme-tech .article-content h3{color:#30343a}
+.theme-tech .article-content strong{color:#16191f}
+.theme-tech .article-content blockquote{background:#f2f6ff;border-left-color:#3678ff;color:#20242b}
 .theme-tech .article-content a{color:#3478f6}
-.theme-tech .article-content ul{padding-left:1.4em;margin:9px 0 18px}
-.theme-tech .article-content li{margin:5px 0}
-.theme-tech .article-content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;background:#f2f4f7;border-radius:4px;padding:2px 5px;color:#374151}
-.theme-tech .article-footer{margin-top:28px}
