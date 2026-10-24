@@ -2,6 +2,8 @@
 
 一个纯前端、无需后端的微信公众号文章排版小工具。参考 [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill) 的主题设计语言重新实现，内置六套杂志级主题，可本地运行，也可部署到 Vercel。
 
+> 项目地址：[github.com/ilei131/wechat-article-styler](https://github.com/ilei131/wechat-article-styler)
+
 ## 六套主题
 
 | 主题 | 气质 | 适合内容 |
@@ -110,6 +112,7 @@ vercel --prod
 - 不含渐变背景，降低公众号暗色模式检测导致弹窗的风险。
 - 图片统一 `max-width:100%;height:auto`，不会被强制拉伸。
 - 文章最外层使用 `padding:0`，不再叠加左右和底部内边距；粘贴到公众号后看到的少量页边距来自微信原生排版。
+- 预览区会用界面 CSS 补一层约 18px 的阅读留白来模拟微信文章页，这层样式只存在于工具界面，不参与复制或导出。
 - 微信公众号后台仍可能过滤部分 HTML / CSS，不同浏览器复制效果也可能不同，建议先发预览确认。
 - 图片上传、公众号账号登录、直接发布文章不在本项目范围内。
 
@@ -124,6 +127,15 @@ app.js         界面交互、复制与导出
 start.sh       本地启动脚本（macOS / Linux）
 start.bat      本地启动脚本（Windows）
 ```
+
+## License
+
+本项目以 **GNU Affero General Public License v3.0 or later（AGPL-3.0-or-later）** 发布，完整条款见根目录 [LICENSE](./LICENSE)。
+
+- 你可以自由使用、修改和分发本项目；分发修改版本时需要保留同样的许可证，并提供完整源代码。
+- 如果通过网络提供服务，AGPL 要求向使用者提供对应的完整源代码。
+- 本项目是一个独立的重新实现，主题设计语言参考自 [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)，未直接复用其代码。
+- 上游项目版权：Copyright (C) 2026 甲木 (Jiamu) × 摸鱼小李 (Moyu Xiaoli)，同样采用 AGPL-3.0-or-later，其许可证全文已保留在根目录 `LICENSE` 中。
 
 ## 致谢
 
