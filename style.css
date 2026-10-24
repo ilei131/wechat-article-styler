@@ -404,5 +404,5 @@ footer span { margin: 0 6px; }
   .export-actions .btn { padding: 11px 10px; }
   .copy-rich { flex-basis: 100%; }
   .option-note { display: none; }
-  .phone-stage { padding: 8px; }
+  .phone-stage { padding: 0px; }
 }
