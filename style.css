@@ -56,7 +56,7 @@ body { margin: 0; min-width: 320px; }
 .app-shell {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 14px clamp(16px, 4vw, 56px) 28px;
+  padding: 12px clamp(16px, 4vw, 56px) 12px;
 }
 
 .intro { text-align: center; margin: 4px 0 32px; }
@@ -256,7 +256,6 @@ textarea {
   background: #f7f8fb;
   border: 1px solid #e1e6ef;
   border-radius: 12px;
-  padding: 12px;
   display: flex;
   justify-content: center;
   min-height: 400px;
@@ -387,7 +386,7 @@ footer span { margin: 0 6px; }
   .topbar { height: 66px; padding: 0 16px; }
   .theme-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .privacy { display: none; }
-  .app-shell { padding: 25px 12px; }
+  .app-shell { padding: 12px 12px; }
   .intro { margin-bottom: 22px; }
   .intro p { font-size: 12px; line-height: 1.7; }
   .workspace { gap: 13px; }
